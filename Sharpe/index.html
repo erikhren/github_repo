@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<link rel="stylesheet" href="style.css"> -->
+    
+ <style>
+            div {
+        border: 1px  #000000;
+        border-radius: 10px;
+    }  
+    .parent {
+        display: grid;
+        border: 0px;;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+
+       .column {
+                  float: left;
+                  width: 50%;
+                }
+     
+     .parent:after {
+      content: "";
+      display: table;
+      clear: both;
+}
+        .div2 { 
+                grid-area: 3 / 1 / 4 / 3; 
+                margin: 10px;
+                padding: 20px;
+                box-shadow: 0 0 2px 2px #dddddd;
+            }
+        .div3 { 
+                grid-area: 1 / 1 / 3 / 2; 
+                margin: 10px;
+                padding: 20px;
+                box-shadow: 0 0 2px 2px #dddddd;
+            }
+        .div4 { 
+                grid-area: 1 / 2 / 3 / 3; 
+                margin: 10px;
+                border: 0px;
+
+            }
+    body {
+        font-family: Arial, Helvetica, sans-serif
+    }
+
+    .flexbox {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+        border: 0px;
+        padding: 0px;
+    }
+    .flexitem {
+        flex: 0;
+        padding: 20px;
+        border: 1px #ffffff;
+        box-shadow: 0 0 2px 2px #dddddd;
+    }
+
+    hr{
+        height: 1px;
+        background-color: #ccc;
+        border: none;
+    }
+    </style>
+    
+</head>
+<body>
+    <!---->
+    <img src="https://nil.com/wp-content/uploads/2021/06/nil-logo.svg" alt="header" style="margin: 30px;">
+
+    <h1 style="padding-left: 12px;">FEV Report</h1>
+    <div class="parent">
+        <div class="column"> </div>
+        <div class="column">
+            <h2>Assets</h2>
+            <hr>
+            <h3>MAIN INVOLVED ASSETS</h3>
+            <p>{'hostname': 'HOSTNAME', 'ipaddress': 'IPADRESS', 'notes': 'NOTES'}</p>
+            <hr>
+            <h3>RELATED ASSETS</h3>
+            <p>{'hostname': 'RELHOST', 'ipaddress': 'RELIP', 'notes': 'RELNOTES'}</p>
+            <hr>
+        </div>
+        <div class="column">
+            <h2>Page Information</h2> 
+            <hr>
+            <h3>INCIDENT REPORT CREATED</h3>
+            <p>22-04-2022 07:21:40</p>
+            <hr>
+            <h3>CASE CREATED</h3>
+            <p>2022-04-19T08:26:28.340171761+02:00</p>
+            <hr>
+            <h3>CASE SEVERITY</h3>
+            <p>Medium</p>
+            <hr>
+            <h3>TRUE POSITIVE PROBABILITY</h3>
+            <p>Medium</p>
+            <hr>
+            <h3>CUSTOMER ACTION REQUIRED</h3>
+            <p>No action is required as the case is closed</p>
+            <hr>
+            <h3>INCIDENT REPORT RECIPENT</h3>
+            <p>Erik Hren (Security Analyst)</p>
+            <hr>
+        </div>
+        <div class="column"> 
+            <div class="flexbox">
+                <div class="flexitem" style="margin-bottom: 20px;">
+                    <h3>Notes</h3>
+                    <hr>
+                    <p>Incidentnotes</p>
+                    <hr>
+                </div>
+                <div class="flexitem">
+                    <h3>Incident Files</h3>
+                    <hr>
+                    <p>22-04-2022 07:21:400</p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
